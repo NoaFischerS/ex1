@@ -1,9 +1,9 @@
 # ex1
 This project represents an undirected, weighted graph and algorithems on this graph.
 
-there are 2 classes and one inner class.
+there are 2 classes WGraph_DS, WGraph_Algo and one inner class NodeInfo, which is in WGraph_DS.
 
-The most basic object is a node which implements the node_info interface and is an inner class of Wgraph_DS. there is a HashMap of his neighbors and the distance from them, and other paremeters. 
+NodeInfo is an inner class which implements the node_info interface and is an inner class of Wgraph_DS. there is a HashMap of his neighbors and the distance from them, and other paremeters. 
 
 Graph_DS class represents is an undirected, weighted graph and implements the weighted__graph interface. This object contains a HashMap which holds the key of a node and the node itself and some orher parameters. 
 
