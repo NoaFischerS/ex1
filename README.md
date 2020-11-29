@@ -1,24 +1,24 @@
 # ex1
-This project represents an undirected, weighted graph.
+This project represents an undirected, weighted graph and algorithems on this graph.
 
-there are 2 classes which implements 3 interfaces. The main data structure that was used in this project is a HashMap.
+there are 2 classes and one inner class.
 
-The main idea of the project :
-The most basic object in this project is the Node which is implementing the node_info interface and shows up as a inner class in the Graph class. each node contains a HashMap of his neighbors and the distance from them. 
+The most basic object is a node which implements the node_info interface and is an inner class of Wgraph_DS. there is a HashMap of his neighbors and the distance from them, and other paremeters. 
 
-The Graph is an undirected, weighted graph that implements the weighted__graph interface. This object contains a HashMap which holds the key of a node and the node. 
+Graph_DS class represents is an undirected, weighted graph and implements the weighted__graph interface. This object contains a HashMap which holds the key of a node and the node itself and some orher parameters. 
 
-And a class that implements algorithms on the graph. this class implements the weighted_graph_algorithms interface. This class provides Dijkstra and uses it. 
+And WGraph_Algo a class that implements algorithms on the graph. this class implements the weighted_graph_algorithms interface. This class as an impimentetion of Dijkstra algorithm and uses it for other methods. 
 
 
-Node info inner class in WGraph_DS 
-Contains parameters :
+Node info inner class in WGraph_DS
+
+Parameters:
 int key - represents a key, every node in the graph has his unique key. 
 String info - mainly used for Dijkstra algorithm.
 int tag - mainly used for Dijkstra algorithm.
-HashMap<node_info, Double> neighbors With Weights - HashMap of neighbors of a node and distances
+HashMap<node_info, Double> neighborsWithWeights - HashMap of neighbors of a node and distances
 
-Methods :
+Functions:
 NodeInfo(int key) - NodeInfo class constructor
 int getKey() - Return the key associated with this node
 String getInfo() - Returns the info of the node
@@ -28,14 +28,14 @@ setTag(double t) - Allows setting this node tag parameter to the given value.
 boolean nodeEquals(NodeInfo node)-compers nodes.
 
 WGraph_DS
-This class represents a weighted undirected graph data structure
+This class represents a weighted undirected graph
 
-Contained parameters :
-HashMap<Integer, node_info> keys with nodes - used to contain the nodes in the graph according to their key
+Parameters:
+HashMap<Integer, node_info> keysWithNodes - used to contain the nodes in the graph according to their key
 int countMc - a parameter that counts the number of changes which was done on the graph
 int countEdge - a parameter that counts the number of edges in the graph.
 
-Methods :
+Functions:
 WGraph_DS() - Constructor method for WGrpah_DS class 
 WGraph_DS(weighted_graph source) - Copy constructor
 getNode(int key) - Returns the node_info by the given key
@@ -55,10 +55,10 @@ boolean equals(Object compared) - Method provides a comparison for this graph an
 WGraph_Algo
 WGraph__Algo class which implements weighted_graph_algorithms interface.
 
-Contains parameters :
+Parameters:
 weighted_graph graph - a graph.
 
-Methods :
+Functions:
 void init(weighted_graph g) - Init the graph on which this set of algorithms operates on.
 weighted_graph getGraph() - Method which returns a pointer to the graph.
 weighted_graph copy() - Compute a deep copy of this weighted graph.
